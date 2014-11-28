@@ -11,7 +11,7 @@ using NUnit.Framework;
 namespace ClearMeasure.AFA.Tests.IntergrationTests
 {
     [TestFixture]
-    public class Using3And5Strategies
+    public class Using3And5andDefaultStrategies
     {
         private IEnumerable<IDivisorStrategy> strategies;
         private long upperBound = 10;
@@ -22,17 +22,18 @@ namespace ClearMeasure.AFA.Tests.IntergrationTests
         [Test]
         public void RunTest()
         {
-            GivenIHaveA3and5Stragies();
+            GivenIHaveA3and5andDefaultStragies();
             WhenIExecuteWithAnUpperBoundOf10();
             ThenMyWriterShouldWriteTheAppropriateText();
         }
 
-        private void GivenIHaveA3and5Stragies()
+        private void GivenIHaveA3and5andDefaultStragies()
         {
             strategies = new List<IDivisorStrategy>
             {
                 new DivisibleBy5(),
-                new DivisibleBy3()
+                new DivisibleBy3(),
+                new DefaultDivisorStrategy()
             };
         }
 
