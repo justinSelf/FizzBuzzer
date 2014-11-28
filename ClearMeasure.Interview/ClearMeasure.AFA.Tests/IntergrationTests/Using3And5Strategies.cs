@@ -11,7 +11,7 @@ using NUnit.Framework;
 namespace ClearMeasure.AFA.Tests.IntergrationTests
 {
     [TestFixture]
-    public class Using3And5andDefaultStrategies
+    public class Using3And5Strategies
     {
         private IEnumerable<IDivisorStrategy> strategies;
         private long upperBound = 10;
