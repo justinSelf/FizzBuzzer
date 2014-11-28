@@ -32,8 +32,7 @@ namespace ClearMeasure.AFA.Tests.IntergrationTests
             strategies = new List<IDivisorStrategy>
             {
                 new DivisibleBy5(),
-                new DivisibleBy3(),
-                new DefaultDivisorStrategy()
+                new DivisibleBy3()
             };
         }
 

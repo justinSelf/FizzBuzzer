@@ -12,9 +12,9 @@ namespace ClearMeasure.Interview
     {
         static void Main(string[] args)
         {
-            var fizzBuzzer = new FizzBuzzer(new ConsoleWriter());
+           // var fizzBuzzer = new FizzBuzzer(new ConsoleWriter());
 
-            fizzBuzzer.Execute();
+            //fizzBuzzer.Execute();
         }
     }
 }

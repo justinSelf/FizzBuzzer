@@ -5,9 +5,9 @@ namespace ClearMeasure.AFA.DivisorStrategies
     public abstract class BaseDivisorStrategy : IDivisorStrategy
     {
         public long Divisor { get; protected set; }
-        public virtual string GetMessageForFactorOf(long number)
+        public virtual bool IsFactorOf(long number)
         {
-            return number % Divisor == 0 ? Message : "";
+            return number % Divisor == 0;
         }
 
         public string Message { get; protected set; }

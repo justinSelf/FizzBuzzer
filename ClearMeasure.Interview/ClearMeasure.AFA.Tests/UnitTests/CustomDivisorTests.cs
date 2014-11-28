@@ -8,33 +8,35 @@ namespace ClearMeasure.AFA.Tests.UnitTests
     [TestFixture]
     public class CustomDivisorTests
     {
-        const string FUNC_MESSAGE = "I'm a message";
+
         [Test]
         public void CustomDivisorShouldWork()
         {
             //Arrange
-            var divisor = new CustomDivisor(3, FUNC_MESSAGE);
+            var divisor = new CustomDivisor(3, "");
 
             //Act
-            var result = divisor.GetMessageForFactorOf(9);
+            var result = divisor.IsFactorOf(9);
 
             //Assert
-            result.Should().Be(FUNC_MESSAGE);
+            result.Should().BeTrue();
         }
 
         [Test]
         public void ShouldCallTheSuppliedFactorFunction()
         {
             //Arrange
-            Func<long, string> badFactorFunc = num => FUNC_MESSAGE;
+            var suppliedFactorFunctionWasCalled = false;
+
+            Func<long, bool> badFactorFunc = num => suppliedFactorFunctionWasCalled = true;
 
             var divisor = new CustomDivisor(3, "", badFactorFunc);
 
             //Act
-            var message = divisor.GetMessageForFactorOf(9);
+            var message = divisor.IsFactorOf(9);
 
             //Assert
-            message.Should().Be(FUNC_MESSAGE);
+            message.Should().BeTrue();
         }
     }
 }

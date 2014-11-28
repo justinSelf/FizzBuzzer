@@ -19,7 +19,7 @@ namespace ClearMeasure.AFA.Tests.UnitTests
             var mockWriter = MockRepository.GenerateMock<IWriter>();
             mockWriter.Expect(writer => writer.WriteLine(Arg<string>.Is.Anything)).Repeat.Times(UPPERBOUND);
 
-            var strategies = new List<IDivisorStrategy> { new DefaultDivisorStrategy() };
+            var strategies = new List<IDivisorStrategy>();
             var fizzer = new FizzBuzzer(mockWriter, strategies);
 
             //Act
@@ -34,8 +34,8 @@ namespace ClearMeasure.AFA.Tests.UnitTests
         {
             //Arrange
             var mockDivisorStrategy = MockRepository.GenerateMock<IDivisorStrategy>();
-            mockDivisorStrategy.Expect(strat => strat.GetMessageForFactorOf(Arg<long>.Is.Anything))
-                .Return(string.Empty)
+            mockDivisorStrategy.Expect(strat => strat.IsFactorOf(Arg<long>.Is.Anything))
+                .Return(true)
                 .Repeat.Times(UPPERBOUND);
 
             var strategies = new List<IDivisorStrategy> { mockDivisorStrategy };

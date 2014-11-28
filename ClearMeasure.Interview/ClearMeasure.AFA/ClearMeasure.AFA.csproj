@@ -40,7 +40,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DivisorStrategies\BaseDivisorStrategy.cs" />
-    <Compile Include="DivisorStrategies\DefaultDivisorStrategy.cs" />
     <Compile Include="DivisorStrategies\DivisibleBy3.cs" />
     <Compile Include="DivisorStrategies\DivisibleBy5.cs" />
     <Compile Include="DivisorStrategies\Interfaces\IDivisorStrategy.cs" />

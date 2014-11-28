@@ -23,8 +23,12 @@ namespace ClearMeasure.AFA
         {
             for (int i = 1; i < upperBound + 1; i++)
             {
-                var message = divisorStrategies.Select(strat => strat.GetMessageForFactorOf(i))
-                    .Aggregate((total, next) => total += next);
+                var factors = divisorStrategies
+                    .Where(strat => strat.IsFactorOf(i))
+                    .Select(strat => strat.Message);
+
+                var message = factors.Any() ? factors.Aggregate((current, next) => current + next)
+                : i.ToString();
 
                 writer.WriteLine(message);
             }
