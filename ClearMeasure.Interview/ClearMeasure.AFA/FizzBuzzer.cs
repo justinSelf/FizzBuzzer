@@ -19,7 +19,7 @@ namespace ClearMeasure.AFA
             this.divisorStrategies = divisorStrategies;
         }
 
-        public void Execute(ulong upperBound = 100)
+        public void Execute(decimal upperBound = 100)
         {
             for (ulong i = 1; i < upperBound + 1; i++)
             {
