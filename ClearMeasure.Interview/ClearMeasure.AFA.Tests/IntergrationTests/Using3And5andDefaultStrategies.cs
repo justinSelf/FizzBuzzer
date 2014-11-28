@@ -38,7 +38,7 @@ namespace ClearMeasure.AFA.Tests.IntergrationTests
 
         private void WhenIExecuteWithAnUpperBoundOf10()
         {
-            stringBuilder = new StringBuilder(100);
+            stringBuilder = new StringBuilder();
             fizzBuzzer = new FizzBuzzer(new StringBuilderWriter(stringBuilder), strategies);
             fizzBuzzer.Execute(upperBound);
 
@@ -54,8 +54,9 @@ Buzz
 Fizz
 7
 8
-9
-Buzz";
+Fizz
+Buzz
+";
             stringBuilder.ToString().Should().Be(expectedMessage);
         }
     }
