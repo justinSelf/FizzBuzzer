@@ -25,10 +25,9 @@ namespace ClearMeasure.AFA
             {
                 var factors = divisorStrategies
                     .Where(strat => strat.IsFactorOf(i))
-                    .Select(strat => strat.Message);
+                    .Select(strat => strat.Message).ToList();
 
-                var message = factors.Any() ? factors.Aggregate((current, next) => current + next)
-                : i.ToString();
+                var message = factors.Count > 0 ? factors.Aggregate((current, next) => current + next) : i.ToString();
 
                 writer.WriteLine(message);
             }
