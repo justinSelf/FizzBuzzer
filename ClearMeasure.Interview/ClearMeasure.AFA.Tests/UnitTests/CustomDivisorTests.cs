@@ -3,7 +3,7 @@ using ClearMeasure.AFA.DivisorStrategies;
 using FluentAssertions;
 using NUnit.Framework;
 
-namespace ClearMeasure.AFA.Tests
+namespace ClearMeasure.AFA.Tests.UnitTests
 {
     [TestFixture]
     public class CustomDivisorTests
