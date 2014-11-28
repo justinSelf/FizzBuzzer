@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClearMeasure.Interview", "C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClearMeasure.AFA", "ClearMeasure.AFA\ClearMeasure.AFA.csproj", "{80884B31-6FB9-480A-8D62-0B4DE52ECECD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClearMeasure.AFA.Tests", "ClearMeasure.AFA.Tests\ClearMeasure.AFA.Tests.csproj", "{63B1EAD8-5559-4869-A99A-A2FCAEBF5443}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{80884B31-6FB9-480A-8D62-0B4DE52ECECD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80884B31-6FB9-480A-8D62-0B4DE52ECECD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80884B31-6FB9-480A-8D62-0B4DE52ECECD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63B1EAD8-5559-4869-A99A-A2FCAEBF5443}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63B1EAD8-5559-4869-A99A-A2FCAEBF5443}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63B1EAD8-5559-4869-A99A-A2FCAEBF5443}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63B1EAD8-5559-4869-A99A-A2FCAEBF5443}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
