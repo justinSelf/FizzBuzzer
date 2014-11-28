@@ -17,8 +17,14 @@ namespace ClearMeasure.AFA.DivisorStrategies
 
         }
 
-        public CustomDivisor(decimal divisor, string message, Func<decimal, bool> factorFunc)
+        public CustomDivisor(string message, Func<decimal, bool> factorFunc)
+            :this(0, message, factorFunc)
         {
+        }
+
+        private CustomDivisor(decimal divisor, string message, Func<decimal, bool> factorFunc)
+        {
+
             this.Divisor = divisor;
             this.Message = message;
 

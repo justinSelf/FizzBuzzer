@@ -30,7 +30,7 @@ namespace ClearMeasure.AFA.Tests.UnitTests
 
             Func<decimal, bool> badFactorFunc = num => suppliedFactorFunctionWasCalled = true;
             
-            var divisor = new CustomDivisor(3, "", badFactorFunc);
+            var divisor = new CustomDivisor("", badFactorFunc);
 
             //Act
             var message = divisor.IsFactorOf(9);
