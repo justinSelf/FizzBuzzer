@@ -4,7 +4,7 @@ namespace ClearMeasure.AFA.DivisorStrategies
 {
     public class CustomDivisor : BaseDivisorStrategy
     {
-        private readonly Func<long, bool> factorFunction;
+        private readonly Func<long, string> factorFunction;
         public CustomDivisor()
             : this(0, "Custom")
         {
@@ -17,15 +17,15 @@ namespace ClearMeasure.AFA.DivisorStrategies
 
         }
 
-        public CustomDivisor(long divisor, string message, Func<long, bool> factorFunc)
+        public CustomDivisor(long divisor, string message, Func<long, string> factorFunc)
         {
             this.Divisor = divisor;
             this.Message = message;
 
-            factorFunction = factorFunc ?? (num => num % Divisor == 0);
+            factorFunction = factorFunc ?? (num => num % Divisor == 0 ? Message : "");
         }
 
-        public override bool IsFactorOf(long number)
+        public override string GetMessageForFactorOf(long number)
         {
             return factorFunction(number);
         }

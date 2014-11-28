@@ -3,7 +3,7 @@
     public interface IDivisorStrategy
     {
         long Divisor { get; }
-        bool IsFactorOf(long number);
+        string GetMessageForFactorOf(long number);
         string Message { get; }
     }
 }
