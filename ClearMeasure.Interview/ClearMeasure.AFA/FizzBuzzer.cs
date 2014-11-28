@@ -21,14 +21,10 @@ namespace ClearMeasure.AFA
 
         public void Execute(int upperBound = 100)
         {
-            for (int i = 1; i < upperBound; i++)
+            for (int i = 1; i < upperBound + 1; i++)
             {
-                var message = "";
-
-                if (i % 15 == 0) message = "Fizzuzz";
-                else if (i % 3 == 0) message = "Fizz";
-                else if (i % 5 == 0) message = "Buzz";
-                else message = i.ToString();
+                var message = divisorStrategies.Select(strat => strat.GetMessageForFactorOf(i))
+                    .Aggregate((total, next) => total += next);
 
                 writer.WriteLine(message);
             }
