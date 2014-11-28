@@ -19,9 +19,9 @@ namespace ClearMeasure.AFA
             this.divisorStrategies = divisorStrategies;
         }
 
-        public void Execute(long upperBound = 100)
+        public void Execute(ulong upperBound = 100)
         {
-            for (int i = 1; i < upperBound + 1; i++)
+            for (ulong i = 1; i < upperBound + 1; i++)
             {
                 var factors = divisorStrategies
                     .Where(strat => strat.IsFactorOf(i))

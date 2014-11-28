@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,7 +24,11 @@ namespace ClearMeasure.Interview
 
             var fizzer = new FizzBuzzer(writer, strategies);
 
-            fizzer.Execute();
+            ulong upperBound;
+
+            ulong.TryParse(ConfigurationManager.AppSettings["uppperboud"], out upperBound);
+
+            fizzer.Execute(upperBound);
         }
     }
 }

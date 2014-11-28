@@ -34,7 +34,7 @@ namespace ClearMeasure.AFA.Tests.UnitTests
         {
             //Arrange
             var mockDivisorStrategy = MockRepository.GenerateMock<IDivisorStrategy>();
-            mockDivisorStrategy.Expect(strat => strat.IsFactorOf(Arg<long>.Is.Anything))
+            mockDivisorStrategy.Expect(strat => strat.IsFactorOf(Arg<ulong>.Is.Anything))
                 .Return(true)
                 .Repeat.Times(UPPERBOUND);
 

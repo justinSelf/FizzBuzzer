@@ -4,8 +4,8 @@ namespace ClearMeasure.AFA.DivisorStrategies
 {
     public abstract class BaseDivisorStrategy : IDivisorStrategy
     {
-        public long Divisor { get; protected set; }
-        public virtual bool IsFactorOf(long number)
+        public ulong Divisor { get; protected set; }
+        public virtual bool IsFactorOf(ulong number)
         {
             return number % Divisor == 0;
         }

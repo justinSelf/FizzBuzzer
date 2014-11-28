@@ -2,8 +2,8 @@
 {
     public interface IDivisorStrategy
     {
-        long Divisor { get; }
-        bool IsFactorOf(long number);
+        ulong Divisor { get; }
+        bool IsFactorOf(ulong number);
         string Message { get; }
     }
 }

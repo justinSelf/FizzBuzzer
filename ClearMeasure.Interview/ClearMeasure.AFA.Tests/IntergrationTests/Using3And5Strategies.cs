@@ -14,7 +14,7 @@ namespace ClearMeasure.AFA.Tests.IntergrationTests
     public class Using3And5Strategies
     {
         private IEnumerable<IDivisorStrategy> strategies;
-        private long upperBound;
+        private ulong upperBound;
         private IWriter writer;
         private FizzBuzzer fizzBuzzer;
         private StringBuilder stringBuilder;

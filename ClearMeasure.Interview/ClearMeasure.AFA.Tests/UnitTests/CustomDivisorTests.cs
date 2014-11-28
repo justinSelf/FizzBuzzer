@@ -28,8 +28,8 @@ namespace ClearMeasure.AFA.Tests.UnitTests
             //Arrange
             var suppliedFactorFunctionWasCalled = false;
 
-            Func<long, bool> badFactorFunc = num => suppliedFactorFunctionWasCalled = true;
-
+            Func<ulong, bool> badFactorFunc = num => suppliedFactorFunctionWasCalled = true;
+            
             var divisor = new CustomDivisor(3, "", badFactorFunc);
 
             //Act
